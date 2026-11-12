@@ -1,31 +1,21 @@
-/* temples-large.css — larger view (700px and wider) */
+/* temples-large.css - larger view */
 @media (min-width: 700px) {
-  header {
-    flex-wrap: nowrap;
-    padding: 0.5rem 2rem;
+  #menu-button {
+    display: none;
   }
-
-  /* Hamburger only shows in mobile view */
-  #menu-button { display: none; }
-
+ 
   nav,
   nav.open {
-    display: flex;
     flex-direction: row;
     width: auto;
-    gap: 0.5rem;
   }
-
+ 
   nav a {
-    border-top: none;
     padding: 0.5rem 0.9rem;
-    border-radius: 4px;
   }
-
-  h1 { font-size: 1.4rem; }
-
+ 
   .gallery {
-    grid-template-columns: repeat(3, 1fr);  /* three columns */
-    gap: 2rem 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+ 
