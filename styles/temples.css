@@ -1,0 +1,125 @@
+/* temples.css — mobile-first base styles */
+:root {
+  --primary: #3f0a6b;
+  --primary-dark: #2b0649;
+  --text: #1a1a1a;
+  --bg: #ffffff;
+  --accent: #e9d5ff;
+  --heading-font: "Lato", sans-serif;
+  --body-font: "Montserrat", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+/* ---------- Header & nav ---------- */
+header {
+  background: var(--primary);
+  color: #fff;
+  border-top: 4px solid #444;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.site-title {
+  font-family: var(--heading-font);
+  font-size: 1.75rem;
+  margin: 0.5rem 0;
+}
+
+#menu-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+#menu-button:focus-visible,
+nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+nav {
+  display: none;            /* hidden until hamburger is clicked */
+  flex-direction: column;   /* CSS Flex */
+  width: 100%;
+}
+
+nav.open { display: flex; }
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--heading-font);
+  padding: 0.75rem 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  transition: background-color 0.25s, color 0.25s;
+}
+
+nav a:hover,
+nav a.active {
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+
+/* ---------- Main ---------- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;   /* one column on mobile */
+  gap: 1.5rem;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ccc;
+}
+
+figcaption {
+  font-family: var(--heading-font);
+  font-size: 0.85rem;
+  color: var(--primary);
+  margin-top: 0.25rem;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.75rem 1rem;
+  margin-top: 2rem;
+}
+
+footer p { margin: 0.15rem 0; }
+#lastModified { font-size: 0.7rem; }
