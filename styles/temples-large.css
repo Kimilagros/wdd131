@@ -2,17 +2,18 @@
   #menu-button {
     display: none;
   }
- 
+
   nav,
   nav.open {
+    display: flex;
     flex-direction: row;
     width: auto;
   }
- 
+
   nav a {
     padding: 0.5rem 0.9rem;
   }
- 
+
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
