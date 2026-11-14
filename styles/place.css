@@ -1,0 +1,77 @@
+:root {
+  --main-color: #d91023;
+  --accent-color: #8c0a17;
+}
+
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Lato, sans-serif;
+  background: #fff0f0;
+}
+
+header, footer {
+  background: var(--main-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  border-top: 15px solid var(--accent-color);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.card {
+  background: white;
+  text-align: center;
+  padding: 10px;
+}
+
+dt { font-weight: bold; }
+dd { margin: 0 0 8px; }
+
+@media (min-width: 700px) {
+  main {
+    position: relative;
+  }
+
+  .card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.85);
+    width: 250px;
+  }
+
+  #data {
+    top: 30px;
+    left: 15px;
+  }
+
+  #weather {
+    bottom: 30px;
+    right: 15px;
+  }
+
+  .card h2 {
+    background: var(--accent-color);
+    color: white;
+    margin: 0;
+    padding: 10px;
+  }
+
+  #weather h2::after {
+    content: "⛅";
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 8px;
+}
