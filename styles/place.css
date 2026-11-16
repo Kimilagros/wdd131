@@ -1,18 +1,21 @@
 :root {
   --main-color: #d91023;
   --accent-color: #8c0a17;
+  --page-color: #fff0f0;
+  --white: #ffffff;
+  --panel-color: #ffffffd9;
 }
 
 body {
   max-width: 1000px;
   margin: 0 auto;
   font-family: Lato, sans-serif;
-  background: #fff0f0;
+  background: var(--page-color);
 }
 
 header, footer {
   background: var(--main-color);
-  color: white;
+  color: var(--white);
   text-align: center;
   padding: 20px;
 }
@@ -27,13 +30,20 @@ img {
 }
 
 .card {
-  background: white;
+  background: var(--white);
   text-align: center;
   padding: 10px;
 }
 
-dt { font-weight: bold; }
-dd { margin: 0 0 8px; }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
 
 @media (min-width: 700px) {
   main {
@@ -42,8 +52,9 @@ dd { margin: 0 0 8px; }
 
   .card {
     position: absolute;
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--panel-color);
     width: 250px;
+    padding: 0 0 10px;
   }
 
   #data {
@@ -58,20 +69,13 @@ dd { margin: 0 0 8px; }
 
   .card h2 {
     background: var(--accent-color);
-    color: white;
-    margin: 0;
+    color: var(--white);
+    margin: 0 0 10px;
     padding: 10px;
   }
 
   #weather h2::after {
-    content: "⛅";
+    content: url("../images/weather.svg");
+    margin-left: 15px;
   }
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  margin-bottom: 8px;
 }
