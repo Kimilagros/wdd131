@@ -2,7 +2,7 @@
   --main-color: #d91023;
   --accent-color: #8c0a17;
   --page-color: #fff0f0;
-  --white: #ffffff;
+  --light-color: #ffffff;
   --panel-color: #ffffffd9;
 }
 
@@ -15,7 +15,7 @@ body {
 
 header, footer {
   background: var(--main-color);
-  color: var(--white);
+  color: var(--light-color);
   text-align: center;
   padding: 20px;
 }
@@ -30,7 +30,7 @@ img {
 }
 
 .card {
-  background: var(--white);
+  background: var(--light-color);
   text-align: center;
   padding: 10px;
 }
@@ -69,7 +69,7 @@ li {
 
   .card h2 {
     background: var(--accent-color);
-    color: var(--white);
+    color: var(--light-color);
     margin: 0 0 10px;
     padding: 10px;
   }
