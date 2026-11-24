@@ -102,8 +102,8 @@ function createTempleCard(temple) {
   img.src = temple.imageUrl;
   img.alt = `${temple.templeName} Temple`;
   img.loading = "lazy";
-  img.width = 400;
-  img.height = 250;
+  img.width = 800;
+  img.height = 500;
 
   const caption = document.createElement("figcaption");
   caption.innerHTML = `
